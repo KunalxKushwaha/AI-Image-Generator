@@ -63,17 +63,118 @@ body {
 
 .form-and-image{
     display: flex;
+    gap: 32px;
+    margin-top: 24px;
 }
 
 .form-container{
-    border: solid blue ;
     width: 100%;
 }
 
+.form-container__prompt-input{
+    resize: none;
+    background: var(--gray-bg-color);
+    border: 1.5px solid var(--gray-border-color);
+    border-radius: 8px;
+    padding: 8px 10px;
+    width: 100%;
+    /* height: 150px; */
+    outline: solid 3px transparent;
+    transition: 200ms ease-in;
+}
+
+.form-container__prompt-input:focus {
+    outline: solid 3px var(--light-secondary-color);
+    border-color: var(--primary-color);
+}
+
+.form-container__dropdown-group{
+    margin-top: 8px;
+    display: flex;
+    gap: 12px;
+}
+
+.form-container__dropdown{
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: var(--gray-bg-color);
+    border: 2px solid var(--gray-border-color);
+    outline: solid 3px transparent;
+    transition: 300ms ease;
+    cursor: pointer;
+
+}
+
+.form-container__dropdown:focus {
+    outline: solid 3px var(--light-secondary-color);
+    border-color: var(--primary-color);
+}
+
+.form-container__button{
+    margin-top: 16px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    padding: 8px 12px;
+    fill: white;
+    color: white; 
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+     outline: solid 3px transparent;
+    transition: 300ms ease;
+}
+
+
+.form-container__button:hover {
+    box-shadow: 0px 2px 20px var(--light-secondary-color);
+    
+}
+.form-container__button:focus {
+    outline: solid 3px var(--light-secondary-color);
+}
+
 .image-container{
-    border: solid red;
+   
     aspect-ratio: 1 / 1;
     width: 65%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    position: relative;
+}
+
+.image-container:hover .image-container__image-result{
+    transform: scale(1.05);
+}
+.image-container:hover .image-container__layer{
+    opacity: 1;
+}
+
+.image-container__image-result{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: 300ms ease;
+    /* display: none; Initially hidden */
+}
+
+.image-container__layer{
+    opacity: 0;
+    position: absolute;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.0));
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    transition: 300ms ease;
+
 }
   /* <div class="form-and-image">
             <!-- FORM CONTAINER -->
