@@ -21,7 +21,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, #F2F5FF, #E8E2FF);
+    /* background: linear-gradient(to right, #F2F5FF, #E8E2FF); */
+    background: url(purply-blue-3840x2160-20128.jpg) no-repeat center/cover;
+    
+    backdrop-filter: blur(8px);
      animation: fadeInBody 0.6s ease-in-out;
 }
 @keyframes fadeInBody {
@@ -44,8 +47,16 @@ body {
     border-radius: 12px;
     width: 90%;
     max-width: 700px;
+     transition: 300ms ease, transform 0.3s;
     animation: fadeInUp 1.5s ease;
+ 
 }
+ .container:hover {
+            outline: solid 2px var(--light-secondary-color);
+            border-color: var(--primary-color);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.442);
+            transform: scale(1.05);
+        }
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -137,7 +148,7 @@ body {
 }
 
  .form-container__prompt-input:focus {
-            outline: solid 3px var(--light-secondary-color);
+            outline: solid 2px var(--light-secondary-color);
             border-color: var(--primary-color);
             transform: scale(1.02);
         }
@@ -161,7 +172,7 @@ body {
 
   .form-container__dropdown:focus,
         .form-container__dropdown:hover {
-            outline: solid 3px var(--light-secondary-color);
+            outline: solid 2px var(--light-secondary-color);
             border-color: var(--primary-color);
             transform: scale(1.05);
         }
@@ -208,7 +219,7 @@ body {
      transition: transform 0.3s ease;
 }
  .image-container:hover {
-            transform: scale(1.01);
+            transform: scale(1.04);
         }
 
 
@@ -230,7 +241,7 @@ body {
     object-fit: cover;
     border-radius: 8px;
     transition: 300ms ease;
-    /* display: none; Initially hidden */
+   
 }
 
 .image-container__layer{
