@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Box Icons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+
+<body>
+
+    <!-- CONTAINER -->
+    <main class="container">
+        <!-- TITLE -->
+        <h1 class="title">
+            <box-icon class="title__icon" type='solid' name='magic-wand'></box-icon>
+            <span class="title__text">AI Image Generator</span>
+        </h1>
+
+        <div class="form-and-image">
+            <!-- FORM CONTAINER -->
+            <section class="form-container">
+                <!-- PROMPT INPUT -->
+                <textarea class="form-container__prompt-input" id="prompt" rows="5"
+                    placeholder="Describe your image..."></textarea>
+                <div class="form-container__dropdown-group">
+                    <!-- DROPDOWN STYLE -->
+                    <select class="form-container__dropdown" id="dropdownStyles">
+                        <option value="realistic">Realistic</option>
+                        <option value="anime">Anime</option>
+                        <option value="flux-schnell">Flux Schnell</option>
+                    </select>
+                    <!-- DROPDOWN RATIO -->
+                    <select class="form-container__dropdown" id="dropdownRatio">
+                        <option value="1:1">1:1</option>
+                        <option value="16:9">16:9</option>
+                        <option value="9:16">9:16</option>
+                    </select>
+                </div>
+                <!-- GENERATE IMAGE BUTTON -->
+                <button class="form-container__button" onclick="generateImage()">
+                    <box-icon type='solid' name='magic-wand'></box-icon>
+                    Generate Image
+                </button>
+            </section>
+
+            <!-- IMAGE CONTAINER -->
+            <section class="image-container" id="imageContainer">
+        </div>    
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
