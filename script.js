@@ -17,11 +17,39 @@ function generateImage() {
 
     setLoadingState(true);
 
-
-}
+    var myHeaders = new Headers();
+myHeaders.append("Authorization", "Bearer " + API_KEY);
 
     const formData = new FormData();
     formData.append('prompt', promptValue);
+    formData.append('style', styleValue);
+    formData.append('aspect_ratio', ratioValue);
+
+    var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: formData,
+            redirect: 'follow'
+};
+fetch(API_URL,requestOptions)
+    .then(response => response.blob())
+   .then(blob => {
+     const imageUrl = URL.createObjectURL(blob);
+     imageResultElement.src = imageUrl;
+   })
+   .catch(error => {
+    console.log('error', error);
+    alert('An error occurred while Generating the Image. Please try Again.');
+   })
+    .finally(() => {
+        setLoadingState(false);
+    });
+
+
+}
+
+
+
 
 function setLoadingState(isLoading) {
         if (isLoading) {
@@ -36,6 +64,15 @@ function setLoadingState(isLoading) {
 }
 
 function downloadImage() {
+       const imageUrl = imageResultElement.src;
+    if (!imageUrl) {
+        alert('No image to Download. Please Generate an Image First.');
+        return;
+    }
 
+    const link = document.createElement('a');
+    link.href = imageUrl;
+    link.download = 'Ai-Generated_Image.jpg';
+    link.click();
 
 }

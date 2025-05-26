@@ -22,6 +22,17 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(to right, #F2F5FF, #E8E2FF);
+     animation: fadeInBody 0.6s ease-in-out;
+}
+@keyframes fadeInBody {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* START THE CODE BELOW */
@@ -33,13 +44,25 @@ body {
     border-radius: 12px;
     width: 90%;
     max-width: 700px;
+    animation: fadeInUp 1.5s ease;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .title{
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 18px;
+    margin-left: 10px;
    
 }
 
@@ -51,14 +74,43 @@ body {
     border-radius: 12px;
     padding: 8px;
     box-shadow: 0px 02px 10px var(--light-secondary-color);
+    cursor: pointer;
+     transition: transform 0.3s ease;
+     animation: growIcon 1s ease-in-out ;
 }
+
+@keyframes growIcon {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(-0.8);
+    }
+}
+  .title__icon:hover {
+            transform: rotate(10deg) scale(1.1);
+        }
+
 .title__text {
     background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     background-clip: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    
+    cursor: pointer;
     font-weight: bold;
+    transition: color 0.3s ease;
+    animation: waveText 1.5s ease-in-out infinite;
+}
+@keyframes waveText {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .form-and-image{
@@ -81,13 +133,14 @@ body {
     width: 100%;
     /* height: 150px; */
     outline: solid 3px transparent;
-    transition: 200ms ease-in;
+    transition: 200ms ease-in, transform 0.2s;
 }
 
-.form-container__prompt-input:focus {
-    outline: solid 3px var(--light-secondary-color);
-    border-color: var(--primary-color);
-}
+ .form-container__prompt-input:focus {
+            outline: solid 3px var(--light-secondary-color);
+            border-color: var(--primary-color);
+            transform: scale(1.02);
+        }
 
 .form-container__dropdown-group{
     margin-top: 8px;
@@ -101,15 +154,17 @@ body {
     background: var(--gray-bg-color);
     border: 2px solid var(--gray-border-color);
     outline: solid 3px transparent;
-    transition: 300ms ease;
+    transition: 300ms ease, transform 0.3s;
     cursor: pointer;
 
 }
 
-.form-container__dropdown:focus {
-    outline: solid 3px var(--light-secondary-color);
-    border-color: var(--primary-color);
-}
+  .form-container__dropdown:focus,
+        .form-container__dropdown:hover {
+            outline: solid 3px var(--light-secondary-color);
+            border-color: var(--primary-color);
+            transform: scale(1.05);
+        }
 
 .form-container__button{
     margin-top: 28px;
@@ -134,6 +189,7 @@ body {
 
 .form-container__button:hover {
     box-shadow: 0px 2px 20px var(--light-secondary-color);
+     transform: scale(1.02);
     
 }
 .form-container__button:focus {
@@ -149,7 +205,12 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     position: relative;
+     transition: transform 0.3s ease;
 }
+ .image-container:hover {
+            transform: scale(1.01);
+        }
+
 
 .image-container:hover .image-container__image-result{
     transform: scale(1.05);
@@ -209,14 +270,31 @@ body {
     justify-content: center;
     height: 100%;
     overflow: hidden;
-    
+    animation: pulse 2s infinite ease-in-out;
 
+}
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.09);
+    }
 }
 
 .image-container-loading-spinner{
     width: 35px;
     height: 35px;
+    animation: spin 1s linear infinite;
 }
+ @keyframes spin {
+            0% {
+                transform: rotate(50deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
 
 .image-container__loading-text{
     font-size: 14px;
@@ -255,65 +333,3 @@ body {
         transform: scale(1.1);
     }
 }
-  /* <div class="form-and-image">
-            <!-- FORM CONTAINER -->
-            <section class="form-container">
-                <!-- PROMPT INPUT -->
-                <textarea class="form-container__prompt-input" id="prompt" rows="5"
-                    placeholder="Describe your image..."></textarea>
-                <div class="form-container__dropdown-group">
-                    <!-- DROPDOWN STYLE -->
-                    <select class="form-container__dropdown" id="dropdownStyles">
-                        <option value="realistic">Realistic</option>
-                        <option value="anime">Anime</option>
-                        <option value="flux-schnell">Flux Schnell</option>
-                    </select>
-                    <!-- DROPDOWN RATIO -->
-                    <select class="form-container__dropdown" id="dropdownRatio">
-                        <option value="1:1">1:1</option>
-                        <option value="16:9">16:9</option>
-                        <option value="9:16">9:16</option>
-                    </select>
-                </div>
-                <!-- GENERATE IMAGE BUTTON -->
-                <button class="form-container__button" onclick="generateImage()">
-                    <box-icon type='solid' name='magic-wand'></box-icon>
-                    Generate Image
-                </button>
-            </section>
-
-            <!-- IMAGE CONTAINER -->
-            <section class="image-container" id="imageContainer">
-                <!-- IMAGE RESULT -->
-                <img class="image-container__image-result" id="imageResult" src="example.jpeg" height="20px" width="20px">
-
-                <div class="image-container__layer"></div>
-                <button class="image-container__download-button" onclick="downloadImage()">
-                    <box-icon name='download'></box-icon>
-                </button>
-
-                <!-- LOADING CONTAINER -->
-                <div class="image-container__loading-container">
-                    <svg class="image-container__loading-spinner" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 200 200">
-                        <radialGradient id="a12" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)">
-                            <stop offset="0" stop-color="#2356FF"></stop>
-                            <stop offset=".3" stop-color="#2356FF" stop-opacity=".9"></stop>
-                            <stop offset=".6" stop-color="#2356FF" stop-opacity=".6"></stop>
-                            <stop offset=".8" stop-color="#2356FF" stop-opacity=".3"></stop>
-                            <stop offset="1" stop-color="#2356FF" stop-opacity="0"></stop>
-                        </radialGradient>
-                        <circle transform-origin="center" fill="none" stroke="url(#a12)" stroke-width="20"
-                            stroke-linecap="round" stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100"
-                            r="70">
-                            <animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="2"
-                                values="360;0" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite">
-                            </animateTransform>
-                        </circle>
-                        <circle transform-origin="center" fill="none" opacity=".2" stroke="#2356FF" stroke-width="20"
-                            stroke-linecap="round" cx="100" cy="100" r="70"></circle>
-                    </svg>
-                    <span class="image-container__loading-text">Generating Image ...</span>
-                </div>
-            </section>
-        </div> */
