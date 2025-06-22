@@ -129,7 +129,7 @@ This project is open-source and available under the MIT License.
 
 ---
 
-💡 Future Enhancements
+<h4>💡 Future Enhancements</h4>
 
 🔁 History of generated prompts
 
