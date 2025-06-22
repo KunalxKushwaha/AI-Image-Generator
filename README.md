@@ -39,7 +39,7 @@ Turn your imagination into visuals with **AI Text to Image Generator** — a sle
 
 ## 📂 Project Structure
 
-ai-text2image-generator/ │ ├── index.html          # Main HTML structure ├── style.css           # Styling and animations ├── script.js           # Main JS logic and API integration ├── assets/             # Logo, demo GIFs, icons etc. └── README.md           # You're here
+AI-Image-Generator/ │ ├── index.html          # Main HTML structure ├── style.css           # Styling and animations ├── script.js           # Main JS logic and API integration ├── assets/             # Logo, demo GIFs, icons etc. └── README.md           # You're here
 
 ---
 
