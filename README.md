@@ -63,7 +63,7 @@ ai-text2image-generator/ │ ├── index.html          # Main HTML structure
 
 ---
 
-🖼️ Image Style Modes
+<h4>🖼️ Image Style Modes</h4>
 
 Style	Description
 
