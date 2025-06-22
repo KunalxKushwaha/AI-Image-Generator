@@ -47,7 +47,7 @@ ai-text2image-generator/ │ ├── index.html          # Main HTML structure
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/your-username/ai-text2image-generator.git
+   git clone https://github.com/KunalxKushwaha/ai-text2image-generator.git
    cd ai-text2image-generator
 
 2. Open index.html in your browser
