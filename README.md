@@ -25,8 +25,7 @@ Turn your imagination into visuals with **AI Text to Image Generator** — a sle
 > Add your hosted site link or preview gif/video here
 
 🔗 Live Demo
-
-![Click Here to Create your Images☁️]https://ai-image-generator-khaki-nu.vercel.app/
+https://ai-image-generator-khaki-nu.vercel.app/
 
 ---
 
