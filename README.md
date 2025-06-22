@@ -75,7 +75,7 @@ Style	Description
 
 ---
 
-🔒 API Integration (Optional)
+<h4>🔒 API Integration (Optional)</h4>
 
 To connect with an external text-to-image model like Replicate API, configure the endpoint in script.js like this:
 
