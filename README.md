@@ -122,7 +122,7 @@ Icons by Heroicons, Font Awesome
 
 ---
 
-📄 License
+<h4>📄 License</h4>
 
 This project is open-source and available under the MIT License.
 
