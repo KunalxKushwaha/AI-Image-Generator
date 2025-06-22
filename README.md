@@ -26,7 +26,7 @@ Turn your imagination into visuals with **AI Text to Image Generator** — a sle
 
 🔗 Live Demo
 
-![Click Here to Create your Images☁️](https://ai-image-generator-khaki-nu.vercel.app/)
+![Click Here to Create your Images☁️]https://ai-image-generator-khaki-nu.vercel.app/
 
 ---
 
