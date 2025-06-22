@@ -147,7 +147,3 @@ This project is open-source and available under the MIT License.
 
 
 
----
-
-Let me know if you'd like me to **add dark mode support**, **integrate an actual API**, or **design a landing page** for the generator too.
-
