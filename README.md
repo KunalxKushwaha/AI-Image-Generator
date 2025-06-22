@@ -145,5 +145,7 @@ This project is open-source and available under the MIT License.
 
 > Give this repo a ⭐ if you like it and want to support future improvements!
 
+## Author- Kunal Kushwaha 🖋️ 
+
 
 
