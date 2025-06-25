@@ -121,14 +121,14 @@ Icons by Heroicons, Font Awesome
 
 ---
 
-<h4>📄 License</h4>
+##📄 License
 
 This project is open-source and available under the MIT License.
 
 
 ---
 
-<h4>💡 Future Enhancements</h4>
+##💡 Future Enhancements
 
 🔁 History of generated prompts
 
