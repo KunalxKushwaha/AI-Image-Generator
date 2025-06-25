@@ -109,7 +109,7 @@ Netlify
 
 ---
 
-## <h4>🙌 Credits</h4>
+## 🙌 Credits
 
 Prompt-to-image AI model: Stability AI / Replicate / DALL·E
 
