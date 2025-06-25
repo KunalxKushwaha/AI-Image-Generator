@@ -128,7 +128,7 @@ This project is open-source and available under the MIT License.
 
 ---
 
-##💡 Future Enhancements
+## 💡 Future Enhancements
 
 🔁 History of generated prompts
 
