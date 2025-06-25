@@ -62,7 +62,7 @@ AI-Image-Generator/ │ ├── index.html          # Main HTML structure ├�
 
 ---
 
-##<h4>🖼️ Image Style Modes</h4>
+## 🖼️ Image Style Modes
 
 Style	Description
 
