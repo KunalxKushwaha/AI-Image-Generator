@@ -95,7 +95,7 @@ OpenAI DALL·E (for Pro users)
 
 ---
 
-## <h4>🌐 Deployment</h4>
+## 🌐 Deployment
 
 You can deploy the project easily on:
 
