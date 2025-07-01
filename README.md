@@ -14,7 +14,7 @@ Turn your imagination into visuals with **AI Text to Image Generator** — a sle
 
 - 🔤 Convert **text prompts** into AI-generated images.
 - 🎨 Choose between 3 styles: **Anime**, **Realistic**, and **Flux Schnell**.
-- 💡 Clean, responsive, and user-friendly UI
+- 💡 Clean, responsive, and user-friendly UI.
 - ⚡ Fast performance with intuitive input handling.
 - 📷 Download your generated image with a single click
 
